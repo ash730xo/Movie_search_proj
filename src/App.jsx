@@ -9,15 +9,7 @@ import MovieCard from "./MovieCard"
 export default function App() {
 const API_URL = "http://www.omdbapi.com/?apikey=4350f241 "
 const [movies, setMovies] = useState([])
-
-
-const movie1 = {
-  "Title": "Amazing Spiderman Syndrome",
-  "Year": "2021",
-  "imdbID": "imdbd",
-  "Type": "type",
-  "Poster": "N/A"
-}
+const [searchTerm, setSearchTerm] = useState("")
 
 //function for use effect
 const searchMovies = async (title) => {
@@ -38,8 +30,8 @@ useEffect(() => {
       <div className="search">
         <input 
           placeholder="Search for movies"
-          value=""
-          onChange={() => {}}
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
         />
         <img 
           src={searchIcon}
