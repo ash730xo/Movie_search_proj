@@ -36,7 +36,7 @@ useEffect(() => {
         <img 
           src={searchIcon}
           alt="search"
-          onClick={() => {}}
+          onClick={() => searchMovies(searchTerm)}
         />
       </div>
 
