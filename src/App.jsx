@@ -1,7 +1,10 @@
 import React from "react"
 import { useEffect } from "react"
-// http://www.omdbapi.com/?i=tt3896198&apikey=4350f241 
-//4350f241
+
+import './App.css'
+import searchIcon from './search.svg'
+
+
 export default function App() {
 const API_URL = "http://www.omdbapi.com/?apikey=4350f241 "
 
